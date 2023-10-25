@@ -1,3 +1,13 @@
+//Asodiamos un elemento click a .map
+let map = document.querySelector('.map');
+
+map.addEventListener("click", function (event) {
+  const x = event.clientX;
+  const y = event.clientY;
+  drawCross(x, y);
+});
+
+
 // Recuerda todas las propiedadesque tiene el objeto event !
 
 function drawCross(x, y) {
@@ -21,3 +31,4 @@ function drawCross(x, y) {
   line2.style.top = y + "px";
   document.body.appendChild(line2);
 }
+
